@@ -4,6 +4,7 @@ import { Image, SafeAreaView, StyleSheet, View } from "react-native";
 import Text from "../../../shared/components/text/Text";
 import Button from "../../../shared/components/button/Button";
 import styles from "../styles/profile.styles";
+import { theme } from "../../../themes/theme";
 
 const Profile = ({navigation}) => {
     return (
@@ -22,7 +23,7 @@ const Profile = ({navigation}) => {
             </View>
 
             <View style={styles.footer}>
-                <Button style={styles.button} title="Sair" backColor="#FF5364"/>
+                <Button style={styles.button} title="Sair" backColor={theme.colors.neutralTheme.accent}/>
             </View>
 
         </SafeAreaView>

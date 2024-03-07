@@ -4,6 +4,7 @@ import Button from '../../../shared/components/button/Button';
 import Input from '../../../shared/components/input/Input';
 import Text from '../../../shared/components/text/Text';
 import styles from '../../login/styles/login.styles';
+import { theme } from '../../../themes/theme';
 
 const Login = ({navigation}) => {
 
@@ -20,7 +21,7 @@ const Login = ({navigation}) => {
         <SafeAreaView style={styles.container}>
 
             <StatusBar
-                backgroundColor="#FF5364"
+                backgroundColor={theme.colors.neutralTheme.accent}
             />
             <View style={styles.containerImage}>
                 <Image
@@ -33,7 +34,7 @@ const Login = ({navigation}) => {
 
             <Input style={styles.input} placeholder="Email" onChangeText={setEmail} />
             <Input style={styles.input} secureTextEntry={true} placeholder="Senha" onChangeText={setSenha}/>
-            <Button style={styles.button} title="Entrar" backColor='#FF5364' onPress={onPress}/>
+            <Button style={styles.button} title="Entrar" backColor={theme.colors.neutralTheme.primary} onPress={onPress}/>
 
             <Text style={styles.text} type='NORMAL'>Cadastre-se</Text>
 

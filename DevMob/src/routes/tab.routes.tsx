@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Login from "../modules/login/screens/Login";
 import Home from "../modules/home/screens/Home";
 import Profile from "../modules/profile/screens/Profile";
+import { theme } from "../themes/theme";
 // import Profile from "";
 
 const Tab = createBottomTabNavigator();
@@ -19,7 +20,7 @@ const TabRoutes = () => {
                     tabBarIcon: ({ color, size }) => (
                         <Ionicons name="home" color={color} size={size} />
                     ),
-                    tabBarActiveTintColor: '#FF5364'
+                    tabBarActiveTintColor: theme.colors.neutralTheme.primary,
                 }} 
                 />
             <Tab.Screen 
@@ -30,7 +31,7 @@ const TabRoutes = () => {
                     tabBarIcon: ({ color, size }) => (
                         <Ionicons name="person" color={color} size={size} />
                     ),
-                    tabBarActiveTintColor: '#FF5364',
+                    tabBarActiveTintColor: theme.colors.neutralTheme.primary,
                 }}
             />
             
